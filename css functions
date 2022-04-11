@@ -21,8 +21,8 @@ function vcweb_styles()
   2.2 - Navigation
   2.3 - Footer
 
-3.0 - Page Specific CSS
-  3.1 - Homepage
+3.0 - Row Specific CSS
+  3.1 - Head Panel
 
 4.0 - Admin Branding
   4.1 - Admin Bar
@@ -47,43 +47,24 @@ function vcweb_styles()
    1.1 - General
    ========================= */
 
-:root {
-  --clr-primary: #878787;
-  --clr-primary-rgb: 135 135 135;
 
-  --clr-secondary: #595959;
-  --clr-secondary-rgb: 89 89 89;
-
-  --ff-serif: "Times New Roman", serif;
-  --ff-sans-serif: Helvetica, sans-serif;
-
-  --tr: 0.2s ease-in-out;
-
-  --bs: 0 5px 10px rgb(0 0 0 / 0.25);
-  --bs-small: 0 3px 8px rgb(0 0 0 / 0.25);
-}
 
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-	body {
+body {
 		overflow-x:hidden;
-		background-size:cover;
 	}
-	html, body{
+html, body{
     width: 100%;
     position: relative;
 }
-	.fl-row-content-wrap {
+.fl-row-content-wrap {
 
 		position: relative;
 	}
-	@media (max-width:680px){
-		body {
-			/*background-size:auto;*/
-		}
-	}
+
 /* Utility Classes */
 
 .wrapcenter {
@@ -230,132 +211,38 @@ function vcweb_styles()
    ========================= */
 
 
-.fl-builder-content .fl-button:active, .fl-builder-content a.fl-button {
-  position: absolute;
-    top: 20px;
-    width: 45px;
-    height: auto;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-	padding-left:0px;
-	padding-right:0px;
-}
-	.fl-builder-content .fl-button-right a.fl-button{
-		right: 100px;
-	}
-	.fl-builder-content .fl-button-left a.fl-button{
-		left: 100px;
-	}
-	.fl-button-text{
-		position:relative;
-		right: 12px;
-		white-space: nowrap;
-	}
-	a.fl-button {
-		z-index:9;
-	}
-	.fl-builder-content .horizontal-button .fl-button:active, .fl-builder-content .horizontal-button a.fl-button{
-			writing-mode:horizontal-tb;
-			width: auto;
-			left: auto;
-			right: auto;
-			padding-left:20px;
-			padding-right:20px;
-			position:relative;
-			letter-spacing:0.2em;
-	}
-	 .fl-builder-content .horizontal-button a.fl-button .fl-button-text{
-		font-size:14px!important;
-	  right:0;
-	  margin-left:0.2em;
-	}
-	@media (max-width: 1024px) {
- .fl-button-text{
-		font-size:14px!important;
-	}
 
-		.fl-builder-content .fl-button:active, .fl-builder-content a.fl-button{
-			top:0px;
-			width: 40px;
-		}
-		.fl-button-text {
-    right: 11px;
-}
+@media (max-width: 1024px) {
+ 
 }
 @media (max-width: 680px) {
-	
-		.fl-builder-content .fl-button:active, .fl-builder-content a.fl-button{
-			writing-mode:horizontal-tb;
-			width: auto;
-			left: auto;
-			right: auto;
-			padding-left:20px;
-			padding-right:20px;
-			position:relative;
-			letter-spacing:0.2em;
-	}
-	.fl-builder-content .fl-button-left a.fl-button {
-    left: auto;
-}
-	.fl-builder-content .fl-button-right a.fl-button {
-    right: auto;
-}
-  .fl-button-text{
-		font-size:14px!important;
-	  right:0;
-	  margin-left:0.2em;
-	}
+
 }
 	
 /* =========================
    1.4 - Form
    ========================= */
-	.nf-form-fields-required {
+.nf-form-fields-required {
 		display: none;
-	}
-	.nf-form-content button, .nf-form-content input[type=button], .nf-form-content input[type=submit] {
-			font-size: 14px!important;
-    right: 0;
-    margin-left: 0.2em;
-			writing-mode: horizontal-tb;
-    width: auto;
-    left: auto;
-    right: auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    position: relative;
-    letter-spacing: 0.2em;
-		}
-		.submit-wrap .nf-field-element {
+}
+.nf-form-content button, .nf-form-content input[type=button], .nf-form-content input[type=submit] {
+			
+}
+.submit-wrap .nf-field-element {
 			text-align: right;
-		}
-	.nf-response-msg {
+}
+.nf-response-msg {
 		text-align: center;
 		background-color: rgba(244,199,190,0.6);
 		padding:20px;
-	}
-	@media (max-width: 1024px) {
+}
+@media (max-width: 1024px) {
 		.pp-ninja-form-content .ninja-forms-form-wrap .field-wrap, .nf-field-container .field-wrap .nf-field-label {
     margin-bottom: 0px!important;
 }
-	}
-	@media (max-width: 680px) {
-		.nf-form-content button, .nf-form-content input[type=button], .nf-form-content input[type=submit] {
-			font-size: 14px!important;
-    right: 0;
-    margin-left: 0.2em;
-			writing-mode: horizontal-tb;
-    width: auto;
-    left: auto;
-    right: auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    position: relative;
-    letter-spacing: 0.2em;
-		}
-		.submit-wrap .nf-field-element {
-			text-align: center;
-		}
+}
+@media (max-width: 680px) {
+
 	}
 
 /* =========================
@@ -383,12 +270,12 @@ p + p { margin-top: 1em; }
 	@media (max-width:992px) and (min-width:681px){
 		span.hide-on-tab {
 		display:none;
-	}
-	}
-	@media (min-width: 680px) {
+}
+}
+@media (min-width: 680px) {
 	.justified p{
 		text-align:justify;
-	}
+}
 	
 	.justified-left p{
 		text-align: justify;
@@ -423,155 +310,22 @@ p + p { margin-top: 1em; }
 	line-height:1.4;
 	margin-bottom:15px;
 }
-	/*=============== Special styles*/
-	h3 {
-		font-family: Haus, Verdana, Arial, sans-serif!important;
-    font-weight: 800;
-    text-transform: uppercase;
-		text-align:center;
-		word-spacing: 0.3em;
-		position:relative;
-		z-index:3;
-		letter-spacing:0.1em!important;
-		margin-top:0px;
-		margin-bottom:0px;
-		line-height:2em;
-	}
+	
 	.blog-content h3 {
 		margin-top:20px;
 	}
-	h3 strong {
-		font-size:1.5em;
-		font-weight:normal!important;
-	}
-	.free-guide-pop strong{
-		font-family: Haus, Verdana, Arial, sans-serif!important;
-    font-weight: 800;
-    text-transform: uppercase;
-		word-spacing: 0.3em;
-		letter-spacing:0.1em!important;
-	}
-	@media (max-width: 1024px) {
-		h3 strong {
-		font-size:1.4em;
-		font-weight:normal!important;
-	}
-	}
-	/*================ Back heading text */
-	.back-heading-text h2{
-		font-family: CLOAK, Verdana, Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 4.1em;
-    font-weight: normal;
-    color: #ffffff;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align: center;	
-		margin-left:-20px;
-		margin-right:-20px;
-	}
-	.footer-row .back-heading-text h2{
-		margin-bottom: -35px;
-		color: #fce7d7;
-		font-size: 4em;
-	}
-	.back-heading-text.top-text h2{
-		margin-bottom:-20px;
-	}
-	.back-heading-text.bottom-text h2{
-		margin-top:-25px;
-	}
+
+
 	/*not in edit*/
-	.fl-builder-edit .back-heading-text h2, .fl-builder-edit footer .back-heading-text h2, .fl-builder-edit .back-heading-text.top-text h2, .fl-builder-edit .back-heading-text.bottom-text h2{
-		margin-bottom:0px;
-		margin-top:0px;
-	}
-	.back-heading-text .fl-module-content{
-		margin:0px;
-	}
-	.graphicside .back-heading-text .fl-module-content{
-		margin-right:-200px;
+	.fl-builder-edit {
+		
 	}
 	
-	@media (max-width: 1024px) {
-		.back-heading-text h2 {
-			font-size: 2.9em;
-			
-		}
-		.back-heading-text.top-text h2{
-			margin-bottom:-10px;
-		}
-		.back-heading-text.bottom-text h2{
-		margin-top:-10px;
-	}
-	}
-	@media (max-width: 680px){
-		.back-heading-text h2{
-			margin-left:0px;
-		margin-right:0px;
-		}
-		.back-heading-text.top-text h2{
-			margin-bottom:-20px;
-		}
-		.back-heading-text.bottom-text h2{
-		margin-top:-15px;
-	}
-		.back-heading-text h2 {
-			font-size: 2.5em;
-			
-		}
-	}
-	/* ============== blockquote */
-	blockquote {
-    padding: 10px 20px;
-    margin: 20px -100px 20px 50px;
-    font-size: 1.1em;
-    border-left: none;
-		color: #bb828a;
-		font-weight:600;
-		text-align:right;
-		line-height:2.5em;
-}
-	blockquote p {
-		text-align:right!important;
-		line-height:2.5em;
-}
-	@media (max-width: 1024px) {
-		blockquote {
-			padding: 10px 0px;
-			margin: 10px -30px 10px 20px;
-		}
-	}
-	
-	@media (max-width: 680px) {
-		blockquote {
-			padding: 10px 0px;
-			margin: 10px -20px 10px 100px;
-		}
-	}
 	
 /* =========================
    1.5 - Colours
    ========================= */
-	.top-month h2{
-		color:#ffffff;
-	}
-	.bottom-month h2{
-		color:#fce7d7;
-	}
-	@media (max-width: 1024px) {
-		.top-month h2{
-		color:#fce7d7;
-	}
-	.bottom-month h2{
-		color:#ffffff;
-	}
-	}
-	@media (max-width: 680px){
-		.mobile-pink h2{
-		color:#fce7d7;
-	}
-	}
+	
 
 /* =========================
    1.6 - Hero Styles
@@ -615,52 +369,7 @@ p + p { margin-top: 1em; }
 header {
   position: relative;
 }
-	.fl-page:before{
-		width:100%;
-		content:"";
-		height:800px;
-		background-image: url("https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/top-back.webp");
-		background-position: center top;
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-		position:absolute;
-		top:0px;
-		left:0px;
-		z-index:0;
-	}
-	.fl-page{
-		background-image: url("https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/top-grey.webp");
-		background-position: center 800px;
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-		z-index:0;
-	}
-	.page-template-tpl-no-header-footer .fl-page:before{
-		display: none;
-	}
-	.page-template-tpl-no-header-footer .fl-page{
-		background-image: url("https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/top-grey.webp");
-		background-position: center 500px;
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-		z-index:0;
-	}
-@media (min-width: 681px) and (max-width: 1024px) {
-	.fl-page:before{
-		background-size: cover;
-	}
-}
-
-@media (max-width: 680px) {
-  .fl-page:before{
-	  height:130vh;
-	  background-size: cover;
 	
-	}
-	.fl-page{
-		background-position: center 130vh;
-	}
-}
 
 /* =========================
    2.2 - Navigation
@@ -670,137 +379,33 @@ header {
   -webkit-transition: var(--tr);
   transition: var(--tr);
 }
-	li.dark-button{
-		float:right;
-		background: #1d1d1d!important;
-		color:#fff!important;
-		margin-right:0px;
-		-webkit-transition: all .5s linear;
-    -moz-transition: all .5s linear;
-    -o-transition: all .5s linear;
-    -ms-transition: all .5s linear;
-    transition: all .5s linear;
-	}
-	li.dark-button a{
-		color:#fff!important;
-	}
-		li.dark-button:hover{
-		float:right;
-		background: #bb828a!important;
-		color:#fff!important;
-		margin-right:0px;
-	}
-	li.dark-button a{
-		color:#fff!important;
-	}
-	li.dark-button .menu-item-text{
-		margin-left:3px;
-	}
-	.pp-advanced-menu-mobile-toggle-label{
-		text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-		letter-spacing:3px;
-		font-size:15px;
-}
 	
-@media (min-width: 681px) and (max-width: 1024px) {
- .pp-advanced-menu .menu > li {
-    margin-right: 0!important;
-}
-	.pp-advanced-menu .menu > li.dark-button{
-		margin-right:-3px!important;
-	}
 	
-}
 
-@media (max-width: 680px) {
-  li.dark-button{
-		float:none;
-	}
-}
 
 /* =========================
    2.3 - Footer
    ========================= */
 
-	.news-sign .fl-module-content{
-		margin-top:-10px;
-	}
-	.footer-row
 	
-	/*not in edit*/
-	.fl-builder-edit.news-sign .fl-module-content{
-		margin-top:0px;
-	}
-	 .pp-subscribe-form-inner, .pp-subscribe-form-footer{
-		margin-right:60px;
-	}
 	 .pp-subscribe-form {
 		position:relative;
 	}
 	 .pp-subscribe-form .pp-form-button {
-    position: absolute;
-    top: -3px!important;
-    right: 0px;
-    width: 45px;
-    height: calc(100% - 10px)!important;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+    
 }
 	.pp-subscribe-form .pp-form-field {
     margin-bottom: 0px;
 }
-	 .pp-subscribe-form .pp-form-field input#pp-subscribe-form-name{
-    margin-bottom: 10px;
-}
-	 .pp-subscribe-form .fl-button-text {
-    position: relative;
-    right: 3px;
-    white-space: nowrap;
-}
+
 	.pp-subscribe-form-footer{
 		text-align: center; 
 		font-size: 0.75em; 
 		line-height:1.7em;
 	}
-	#opt-in .news-sign h3 {
-		margin-top:-15px;
-	}
-	@media (min-width: 681px) and (max-width: 1024px) {
-		 .pp-subscribe-form .pp-form-button a.fl-button{
-			top:20px!important;
-			    padding-top: 13px;
-    padding-bottom: 13px;
-}
-		
-  .pp-subscribe-form .pp-form-button .fl-button-text{
-		font-size:15px!important;
-	 right:-1px;
-	}
-}
+
 @media (max-width: 680px) {
-   .pp-subscribe-form .pp-form-button .fl-button-text{
-		font-size:13px!important;
-	}
-	#opt-in .news-sign h3 {
-    margin-top: -5px;
-}
-	 .pp-subscribe-form a.fl-button,  .pp-subscribe-form a.fl-button:active {
-    position: absolute!important;
-    top: 12px!important;
-    right: 0px!important;
-    width: 40px!important;
-    height:auto!important;
-    writing-mode: vertical-rl!important;
-    text-orientation: upright;
-}
-	.pp-subscribe-form a.fl-button,  .pp-subscribe-form a.fl-button:active {
-    padding-top: 10px;
-    padding-right: 5px!important;
-    padding-bottom: 10px;
-    padding-left: 5px!important;
-}
+
 	
 	footer .fl-col-group-responsive-reversed .fl-col:nth-of-type(1) {
     -webkit-box-ordinal-group: 12;
@@ -856,10 +461,7 @@ header {
 	.relative-col{
 		position: relative;
 	}
-	.fl-builder-content .brown-column-button a.fl-button{
-		top:-40px;
-		right:25px!important;
-	}
+	
 	@media (max-width: 1024px) {
 		.right-max-width-col-45 > .fl-col-content{
 		max-width:60%;
@@ -883,75 +485,7 @@ header {
     right: auto!important;
 }
 	}
-/* =========================
-   2.4 - overflow text
-   ========================= */		
-	.overflowed-text-right{
-		position:absolute;
-		right: 0px;
-		width:350px!important;
-	}
-	.overflowed-text-left{
-		position:absolute;
-		left: 0px;
-		width:350px!important;
-	}
-	.overflowed-top {
-		top:30px;
-	}
-	.overflowed-bottom {
-		bottom:50px;
-	}
-	.overflowed-text-right h3{
-		text-align: right;
-		font-size:18px;
-	}
-	.overflowed-text-left h3{
-		text-align: left;
-		font-size:18px;
-	}
-	/*not in edit*/
-	.fl-builder-edit .overflowed-text-left, .fl-builder-edit .overflowed-text-right{
-		position:relative;
-	}
-	.fl-rich-text{
-		z-index:4;
-		position:relative;
-	}
-	@media (max-width: 680px) {
-		.overflowed-top {
-		top:10px;
-	}
-	.overflowed-bottom {
-		bottom:10px;
-	}
-		.overflowed-bottom {
-		bottom:10px;
-	}
-		.overflowed-text-left h3, .overflowed-text-right h3{
-			margin-top:0px;
-			margin-bottom: 0px;
-		}
-	}
-/* =========================
-   2.4 - large image over
-   ========================= */	
-	.large-img-top-over .fl-col-content{
-		margin-top:-120px;
-	}
-	
-	/*not in edit*/
-	.fl-builder-edit .large-img-top-over .fl-col-content, .fl-builder-edit .large-img .fl-col-content{
-		margin-top:40px;
-	}
-	@media (max-width: 680px) {
-		.large-img-top-over .fl-col-content{
-		margin-top:-120px!important;
-		}
-		.form-row .large-img-top-over .fl-col-content{
-		margin-top:-20px!important;
-		}
-	}
+
 /* =========================
    2.4 - testimonials
    ========================= */	
@@ -966,14 +500,7 @@ header {
     height: 260px;
     width: 220px;
 	}
-	.testimonial-col h4 {
-    font-size: 17px;
-    line-height: 2em;
-    letter-spacing: 0px;
-}
-	.testimonial-col .pp-testimonials-image{
-		padding-top:60px;
-	}
+
 	.testimonial-col .owl-nav {
 		position:absolute;
 		top:0px;
@@ -987,9 +514,7 @@ header {
 		margin:0px;
 		border-radius:0px!important;
 	}
- .testimonial-col .pp-testimonials-wrap .owl-theme.owl-carousel .owl-nav button:active, .testimonial-col .pp-testimonials-wrap .owl-theme.owl-carousel .owl-nav button:focus{
-	position: absolute!important;
-	}
+ 
 	.testimonial-col .pp-testimonials-wrap .owl-theme.owl-carousel .owl-nav button.owl-next:before{
 		    content: "next";
     color: #fff!important;
@@ -1017,423 +542,27 @@ header {
 		display:none!important;
 	}
 	@media (max-width:1024px){
-		.testimonial-col .pp-testimonials-image {
-    padding-top: 45px;
-    margin-left: 25%;
-    margin-right: 25%;
-}
-		.testimonial-col .pp-testimonials-image img {
-    max-height: 200px!important;
-    max-width: 100%!important;
-    object-fit: cover;
-}
-		.testimonial-col .pp-testimonials-wrap .owl-theme.owl-carousel .owl-nav button.owl-next:before{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-size: 14px!important;
-	}
-		.testimonial-col .owl-nav {
-    right: calc(50% - 30px);
-}
-		.testimonial-col h4 {
-    font-size: 16px;
-    line-height: 2em;
-    letter-spacing: 0px;
-}
+
 	}
 	
 	/* =========================
    2.4 - Blog
    ========================= */	
 	.pp-grid-loader-text{
-		font-family: Haus, Verdana, Arial, sans-serif!important;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-align: center;
-    word-spacing: 0.3em;
-    position: relative;
-    z-index: 3;
-    letter-spacing: 0.1em!important;
+	
 	}
 	.single-post h1, .fl-theme-builder-singular-single-post h1{
-		font-family: Haus, Verdana, Arial, sans-serif!important;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-align: center;
-    word-spacing: 0.3em;
-    position: relative;
-    z-index: 3;
-    letter-spacing: 0.1em!important;
-		font-size:1.5em;
+	
 	}
 	
-	.single-post .white-hexagon > .fl-col-content, .fl-theme-builder-singular-single-post .white-hexagon > .fl-col-content {
-    margin-top: 25%;
-		margin-left:15%;
-		margin-right: 15%;
-		margin-bottom: 20%;
-}
-	.single-post .white-hexagon.fl-col:before, .fl-theme-builder-singular-single-post .white-hexagon.fl-col:before  {
-    top: 50px;
-    left: -20%;
-    width: 140%;
-    height: 100%;
-}
-	.single-post .top-row .right-slant img, .fl-theme-builder-singular-single-post .top-row .right-slant img {
-    width: 465px;
-    height: 550px!important;
-    object-fit: cover;
-}
-	/* ==================== Top blog */
-	.top-blog .pp-content-grid-post-image {
-		width: 42%;
-		float: left;
-		position: relative;
-	}
-	.top-blog .pp-content-grid-post-image img {
-    width: 465px;
-    height: 550px!important;
-    object-fit: cover;
-    padding-bottom: 15px;
-    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-    -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-		padding: 20px;
-		padding-top:0px;
-}
-	.top-blog .pp-content-grid-post-image:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    height: calc(100% - 30px);
-    background-color: rgba(255,255,255,0.6);
-    -webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
-    top: 30px;
-}
-	.top-blog .pp-content-post {
-    overflow: visible!important;
-}
-	.top-blog .pp-content-grid-post-title{
-		margin-left: 10%;
-		margin-right: 10%;
-		font-size: 1.5em;
-	}
-	.top-blog .read-more-button{
-		position: relative;
-	}
-	.top-blog .pp-content-grid-post-more-link {
-		right: calc(50% - 110px);
-		margin-top: 0px!important;
-    color: #fff!important;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    position: absolute!important;
-    top: 0px;
-    font-family: "Haus",Verdana,Arial,sans-serif;
-    font-weight: 800;
-    font-size: 16px;
-    text-transform: uppercase;
-
-		display: block;
-	}
-	.top-blog .read-more-button a{
-		color: #fff;
-		background: #2d2d2c;
-		white-space: nowrap;
-		border-style: none;
-    border-width: 0;
-    background-clip: border-box;
-    padding-top: 50px;
-    padding-right: 10px;
-    padding-bottom: 50px;
-    padding-left: 10px;
-    font-family: Haus, Verdana, Arial, sans-serif;
-    font-weight: 800;
-    font-size: 13px;
-    text-transform: uppercase;
-		    -webkit-transition: all .5s linear;
-    -moz-transition: all .5s linear;
-    -o-transition: all .5s linear;
-    -ms-transition: all .5s linear;
-    transition: all .5s linear;
-	}
-	.top-blog .read-more-button a:hover {
-		background: #bb828a;
-	}
-	.text-content {
-    width: 58%;
-    height: auto;
-    position: relative;
-    float: left;
-}
-	.text-content:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -20%;
-    z-index: 0;
-    width: 140%;
-    height: 115%;
-    background-image: url(https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/white-hex.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-	.top-blog .pp-content-grid-post-text{
-		position: relative;
-    margin-top: 25%;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 20%;
-		z-index:3;
-		text-align: center;
-}
 	
-	/*===================== blog col*/
-	.blog-col .pp-content-post{
-	    background-image: url(https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/brown-hex.webp);
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: scroll;
-    background-size: contain;
-		padding-top:80px;
-		margin-top: -50px;
-		padding-bottom:50px;
-
-}
+	
 	.blog-col .pp-content-post:nth-child(even) {
 		margin-top:20px;
 		background-image: url(https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/pink-hex.webp);
 		padding-bottom:0px;
 	}
-	.blog-col .pp-post-featured-img:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: calc(50% - 140px);
-    z-index: 0;
-    width: 280px;
-    height: calc(100% - 30px);
-    background-color: rgba(255,255,255,0.6);
-    -webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
-top: 30px;
-}
-	.blog-col .pp-content-grid-inner{
-		margin-left: 15%;
-		margin-right: 15%;
-	}
-	.blog-col .pp-content-grid-title{
-		margin-left: 10%;
-		margin-right: 10%;
-	}
-	.blog-col .pp-content-grid-image img {
-    object-fit: cover;
-    height: 300px!important;
-    width: 250px!important;
-		padding-bottom: 15px;
-		clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-    -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-}
-	.blog-col .pp-content-grid-more-link{
-		right: calc(50% - 110px);
-		margin-top: 0px!important;
-    color: #fff!important;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    background: #2d2d2c!important;
-    position: absolute!important;
-    top: 0px;
-    font-family: "Haus",Verdana,Arial,sans-serif;
-    font-weight: 800;
-    font-size: 16px;
-    text-transform: uppercase;
-    -webkit-transition: all .5s linear;
-    -moz-transition: all .5s linear;
-    -o-transition: all .5s linear;
-    -ms-transition: all .5s linear;
-    transition: all .5s linear;
-
-	}
-	@media (max-width:1024px){
-		.single-post .white-hexagon > .fl-col-content, .fl-theme-builder-singular-single-post .white-hexagon > .fl-col-content {
-    margin-top: 50px;
-		margin-left:7%;
-		margin-right: 7%;
-		margin-bottom: 10%;
-			
-}
-		.single-post .white-hexagon.fl-col:before, .fl-theme-builder-singular-single-post .white-hexagon.fl-col:before  {
-    height: 105%;
-    width: 105%;
-    left: -2.5%;
-			background-position: center;
-			top: 0px;
-}
-		.single-post .top-row .right-slant img, .fl-theme-builder-singular-single-post .top-row .right-slant img {
-    width: 465px;
-    height: 450px!important;
-    object-fit: cover;
-}
-		/* top background */
-		.single-post .fl-page:before, .fl-theme-builder-singular-single-post .fl-page:before {
-    height: 650px;
-}
-		.single-post .fl-page, .fl-theme-builder-singular-single-post .fl-page {
-    background-position: center 650px;
-}
-		.single-post h1, .fl-theme-builder-singular-single-post h1{
-			font-size: 1.4em;
-		}
-		.blog-col .pp-post-featured-img:before {
-    left: -10px;
-    width: calc(100% + 20px);
-
-}
-		.blog-col .pp-content-grid-image img {
-    object-fit: cover;
-    height: 290px!important;
-    width: 200px!important;
-			padding-bottom: 10px;
-		}
-		.blog-col .pp-content-post .pp-post-image {
-    position: relative;
-    margin-left: 27%;
-    margin-right: 27%;
-    width: 46%;
-}
-		.blog-col .pp-content-post{
-		padding-top:5%;
-		}
-		.blog-col .pp-content-grid-inner {
-    margin-left: 0%;
-    margin-right: 0%;
-}
-		.blog-col .pp-content-grid-more-link{
-		right: 25%;
-		}
-		.text-content:before{
-			height: 105%;
-    width: 105%;
-    left: -2.5%;
-    background-position: top center;
-		}
-		.top-blog .read-more-button a{
-			padding-top: 20px;
-			padding-bottom: 20px;
-		}
-	}
-	@media (max-width: 992px){
-		.top-blog .pp-content-post {
-    overflow: hidden!important;
-}
-		
-.blog-col .pp-content-grid-image img {
-    object-fit: cover;
-    height: 200px!important;
-    width: 200px!important;
-    padding-bottom: 10px;
-}
-	}
-	@media (max-width:680px){
-		.single-post .white-hexagon.fl-col:before, .fl-theme-builder-singular-single-post .white-hexagon.fl-col:before  {
-			top: -50px;
-    height: 105%;
-    width: calc(100% + 40px);
-    left: -20px;
-    background-size: cover;
-			background-position: center;
-}
-		.single-post .white-hexagon > .fl-col-content, .fl-theme-builder-singular-single-post .white-hexagon > .fl-col-content {
-    margin-top: 0;
-		margin-left:0;
-		margin-right: 0;
-		margin-bottom: 0;
-			padding:0px 5% 50px;
-			
-}
-		.blog-col .pp-content-post,.blog-col .pp-content-post:nth-child(even){
-		margin-top: 0px;
-			padding-bottom:0px;
-
-}
-		.blog-col .pp-content-grid-image img {
-    height: 220px!important;
-}
-		/*top-blog */
-		.text-content, .top-blog .pp-content-grid-post-image{
-width: 100%;
-}
-		.top-blog .pp-content-grid-post-image{
-margin-left: 20px;
-			margin-right: 20px;
-			max-width: calc(100% - 40px);
-}
-		.top-blog .text-content:before {
-    top: -50px;
-    height: 105%;
-    width: calc(100% + 40px);
-    left: -20px;
-    background-size: cover;
-    background-position: center;
-}
-		.top-blog .pp-content-grid-post-text{
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    padding: 0px 5% 150px;
-}
-		.top-blog .pp-content-post {
-    padding-bottom: 50px;
-}
-		.top-blog .pp-content-grid-post-image img {
-   width: 465px;
-    height: 450px!important;
-    object-fit: cover;
-}
-	}
-	/* =========================
-   2.4 - experience
-   ========================= */
-	.experience-slider .pp-testimonials-title{
-		margin-right:-10px;
-		margin-bottom:-10%;
-		position:relative;
-		z-index:9;
-		font-size:2.5em;
-	}
-	.experience-slider h3 {
-		color: #fff;
-	}
-	.experience-slider h2.pp-testimonials-title{
-		margin-top:0px;
-	}
-	.experience-slider .owl-carousel .owl-stage-outer {
-    margin-right: -170px;
-}
-	@media (max-width:1024px){
-		.experience-slider .pp-testimonials-title{
-			font-size:2.8em;
-			margin-bottom: -8%;
-		}
-	}
-	@media (max-width:680px){
-		.experience-slider h2.pp-testimonials-title{
-		margin-top:0px;
-			margin-right:0px;
-			text-align: center!important;
-	}
-		.experience-slider .owl-carousel .owl-stage-outer {
-    margin-right: -80px;
-}
-	}
+	
 	
 /** END Layout
 --------------------------------------------------------------------------*/
@@ -1460,688 +589,7 @@ margin-left: 20px;
 		line-height:2.9em;
 	}
 	}
-/* =========================
-   3.2 - Image slants
-   ========================= */
-	.logo-img {
-		position: relative;
-		z-index:3;
-	}
-	.left-slant .fl-col-content{
-		 width: 100%;
-  height: auto;
-		position:relative;
-	}
-	.left-slant .fl-col-content:before{
-		 content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-		background-color: rgba(255,255,255,0.6);
-		-webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
-		clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
-	}
-	.opaque-slant .fl-col-content:before{
-		-webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-		clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%)
-	}
-	.top-row .right-slant.services-top-img img {
-    width: 465px;
-    height: 555px!important;
-    object-fit: cover;
-}
-	.left-slant.brown-slant .fl-col-content:before{
-		background-color:rgba(188,173,166,0.6);
-	}
-	.left-slant.opaque-slant .fl-col-content:before{
-		background-color:#fff;
-	}
-	.left-slant.brown-slant .fl-col-content {
-		margin-left:15%;
-		margin-right:15%;
-		margin-top:10%;
-	}
-	.left-slant.opaque-slant .fl-col-content{
-		margin-left:30%;
-		margin-right:15%;
-		margin-top:10%;
-		width:55%;
-	}
-	.left-slant.large-img-top-over .fl-col-content:before{
-		-webkit-clip-path: polygon(0 8%, 100% 0, 98% 100%, 0 96%);
-		clip-path: polygon(0 8%, 100% 0, 98% 100%, 0 96%);
-	}
-	.right-slant .fl-photo-content{
-		clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-		-webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-	}
-	.large-img-top-over .right-slant .fl-photo-content{
-		z-index:3;
-	}
-	.top-row .right-slant img {
-		width: 465px;
-		height:615px!important;
-		object-fit:cover;
-	}
-	.brown-slant .right-slant img {
-		width: 430px;
-		height:430px!important;
-		object-fit:cover;
-	}
-	.opaque-slant .right-slant img {
-		width: 430px;
-		height:430px!important;
-		object-fit:cover;
-	}
-	.large-img-top-over img {
-		width: 1020px;
-		height:550px!important;
-		object-fit:cover;
-	}
-	.large-img .right-slant img {
-		width: 1020px;
-		height:550px!important;
-		object-fit:cover;
-	}
-	.left-max-width-col-55 .right-slant img {
-		width: 450px;
-		height:550px!important;
-		object-fit:cover;
-	}
-	
-	/*not in edit*/
-	.fl-builder-edit .left-slant, .fl-builder-edit .right-slant .fl-photo-content {
-		clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 100%)!important;
-		overflow:visible;
-	}
 
-	@media (max-width:1024px){
-		
-		.left-max-width-col-55 .right-slant img {
-		width: 550px;
-	}
-		.top-row .right-slant img {
-		height:450px!important;
-	}
-		.large-img-top-over img, .large-img .right-slant img {
-    height: 450px!important;
-}
-		.left-slant.brown-slant .fl-col-content {
-		margin-left:5%;
-		margin-right:5%;
-		margin-top:0;
-	}
-		.brown-slant .right-slant img {
-		width: 400px;
-		height:500px!important;
-		object-fit:cover;
-	}
-		.left-slant.opaque-slant .fl-col-content{
-		margin-left:20%;
-		margin-right:20%;
-		margin-top:10%;
-		width:60%;
-	}
-
-	}
-	@media (max-width:680px){
-	
-		.left-max-width-col-55 .right-slant img {
-		height: 450px!important;
-	}
-		.top-row .right-slant img {
-		height:400px!important;
-	}
-			.large-img-top-over img, .large-img .right-slant img {
-    height: 280px!important;
-}
-		.left-slant.brown-slant .fl-col-content {
-		margin-left:0;
-		margin-right:0;
-		margin-top:0;
-	}
-	}
-/* =========================
-   3.3 - Hexagons
-   ========================= */
-	.white-hexagon.fl-col, .single-hex.fl-col {
-		 width: 100%;
-  height: auto;
-		position:relative;
-	}
-	.white-hexagon.fl-col:before{
-		 content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: -20%;
-  z-index: 0;
-  width: 140%;
-  height: 115%;
-		background-image:url("https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/white-hex.webp");
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	.single-hex.fl-col:before{
-		height:100%;
-		content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: -40%;
-  z-index: 0;
-  width: 180%;
-		background-image:url("https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/white-hex.webp");
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	.splash-page .single-hex.fl-col:before{
-		height: calc(100% + 50px);
-    content: '';
-    display: block;
-    position: absolute;
-    top: -50px;
-    left: -20%;
-    z-index: 0;
-    width: 140%;
-		background-image:url("https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/white-hex.webp");
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	.splash-page .single-hex > .fl-col-content {
-    margin-top: 25%;
-    margin-bottom: 15%;
-    margin-left: 13%;
-    margin-right: 13%;
-}
-	.splash-page .single-hex .fl-button {
-    bottom: 0px!important;
-    top: auto!important;
-    right: calc(13% + 45px)!important;
-}
-	.enter-text .fl-module-content {
-		margin-right:calc(13% + 65px)!important;
-	}
-	.splash-page .single-hex.brown-single.fl-col:before{
-		height: 90%;
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -20%;
-    z-index: 0;
-    width: 140%;
-		background-image:url("https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/brown-hex.webp");
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	.splash-page .single-hex.fl-col {
-    width: 50%;
-    height: auto;
-    position: relative;
-}
-	.testimonial-hex.fl-col:before{
-		 content: '';
-  display: block;
-  position: absolute;
-  top: -140px;
-  left:0%;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-		background-color: rgba(255,255,255,0.6);
-		-webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-		clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-	}
-	.white-hexagon > .fl-col-content {
-		margin-top:20%;
- 
-}
-	.single-hex > .fl-col-content {
-		margin-top:5%;
-		margin-bottom:8%;
-		margin-left:13%;
-		margin-right:13%;
- 
-}
-	.single-hex .fl-button {
-		bottom:0px!important;
-		top:auto!important;
-		right:0px!important;
-	}
-	.single-hex.serv-head .fl-button {
-		bottom:-10%!important;
-		top:auto!important;
-		right:5%!important;
-	}
- .left-white-hexagon .fl-module,	.white-hexagon .fl-module, .brown-hexagon  .fl-module{
-		position: relative;
-	}
-	/*left white hexagon*/
-	.left-white-hexagon.fl-col{
-		 width: 100%;
-  		height: 120%;
-		position:relative;
-		margin-top:-35%;
-	}
-	.left-white-hexagon.fl-col:before{
-		 content: '';
-  		display: block;
-  		position: absolute;
- 		top: 0;
-     left: -22%;
-  z-index: 0;
-  width: 144%;
-  height: 130%;
-		background-image:url("https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/white-hex.webp");
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-		z-index:0;
-	}
-	.left-white-hexagon.brown-back.fl-col:before{
-		background-image:url("https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/brown-hex.webp");
-	}
-	.left-white-hexagon > .fl-col-content {
-		margin-top:13%;
-		margin-right: 10%;
-    margin-left: 10%;
-}
-	/*Pink hexagon*/
-	.pink-hex.fl-col {
-		position:relative;
-	}
-	.pink-hex.fl-col:before{
-		 content: '';
-  		display: block;
-  		position: absolute;
-
-    left: -30%;
-    z-index: 1;
-    width: 180%;
-    height: 100%;
-		background-image:url("https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/pink-hex.webp");
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: 0 50%;
-
-	}
-	
-	/*brown hexagon*/
-	.brown-hexagon.fl-col{
-		 width: 100%;
-  		height: 120%;
-		position:relative;
-	}
-	.smaller-brown.brown-hexagon.fl-col{
-		 width: 100%;
-  		height: 100%;
-		position:relative;
-	}
-	.brown-hexagon.fl-col:before{
-		 content: '';
-  		display: block;
-  		position: absolute;
- 		top: -50%;
-    left: -50%;
-    z-index: 0;
-    width: 200%;
-    height: 180%;
-		background-image:url("https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/brown-hex.webp");
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-		z-index:0;
-	}
-	.smaller-brown.brown-hexagon.fl-col:before{
-		top: -150px;
-    left: -20%;
-    width: 140%;
-    height: calc(100% + 300px);
-		z-index:1;
-	}
-	.fl-builder-content .brown-hexagon .brown-column-button a.fl-button {
-    top: -80px;
-    right: 25px!important;
-    position: relative;
-    margin-bottom: -120px;
-    z-index: 4;
-}
-	.fl-builder-content .side-text-button a.fl-button {
-		top:20px;
-    right: 25px!important;
-    position: absolute;
-    margin-bottom: 0px;
-    z-index: 4;
-		height:auto;
-}
-	
-	.fl-builder-edit 
-		.fl-builder-content .side-text-button a.fl-button {
-		top:20px;
-    right: 25px!important;
-    position: relative;
-    margin-bottom: 0px;
-    z-index: 4;
-		height:auto;
-
-}
-	@media (max-width:1380px) and (min-width:1025px){
-		.fl-node-qhmn7lk5epsx > .fl-row-content-wrap {
-    padding-top: 200px;
-			margin-top:-100px;
-}
-	
-	}
-	
-	@media (min-width: 681px) and (max-width: 1024px) {
-		.white-hexagon.fl-col:before{
-			height: 105%;
-			width:105%;
-			left:-2.5%;
-		}
-		.white-hexagon.fl-col {
-    margin-bottom: -10%;
-    width: 120%;
-    left: -20%;
-}
- 
-		.white-hexagon > .fl-col-content {
-		margin-top:15%;
-			padding-left:5%;
-			padding-right:5%;
- 
-}
-		/*left white hexagon*/
-	.left-white-hexagon.fl-col{
-		margin-top:-50%;
-	}
-	.left-white-hexagon.fl-col:before{
-     left: -22%;
-  z-index: 0;
-  width: 144%;
-  height: 130%;
-	}
-	.left-white-hexagon > .fl-col-content {
-		padding-top:20%;
-		margin-right: 10%;
-    margin-left: 10%;
-}
-		.pink-hex.fl-col:before {
-    left: -60%;
-    width: 220%;
-		}
-		.fl-builder-content .side-text-button a.fl-button {
-    position: relative;
-			height:auto;
-		max-height:100%;
-			right:10px!important;
-
-}
-		.single-hex.fl-col:before{
-  left: -25%;
-  width: 150%;
-
-	}
-		.single-hex > .fl-col-content {
-		margin-top:5%;
-		margin-bottom:5%;
-		margin-left:10%;
-		margin-right:10%;
-			max-width:350px;
- 
-}
-		.splash-page .single-hex.fl-col:before {
-    width: 150%;
-			left: -25%;
-}
-		.splash-page .single-hex.brown-single.fl-col:before {
-    left: 0%;
-    width: 100%;
-}
-		.splash-page .single-hex .fl-button {
-    bottom: 0px!important;
-    top: auto!important;
-    right: calc(13% + 20px)!important;
-    width: 36px;
-}
-		.enter-text .fl-module-content {
-    margin-right: calc(13% + 35px)!important;
-}
-		.splash-page .single-hex a.fl-button .fl-button-text{
-    font-size: 13px!important;
-			right: 10px;
-}
-		.splash-page .single-hex > .fl-col-content {
-    margin-top: 20%;
-    margin-bottom: 20%;
-    margin-left: 13%;
-    margin-right: 13%;
-}
-		.smaller-brown.brown-hexagon.fl-col:before {
-    top: -75px;
-    left: -35%;
-    width: 135%;
-    height: calc(100% + 150px);
-    z-index: 1;
-    background-position: left center;
-    background-size: cover;
-}
-}
-	@media (min-width: 993px) and (max-width: 1024px) {
-		.white-hexagon.fl-col:before{
-			height: 105%;
-			width:100%;
-			left:0px;
-		}
-		.single-hex > .fl-col-content {
-		margin-top:5%;
-		margin-bottom:5%;
-		margin-left:auto;
-		margin-right:auto;
-			max-width:350px;
- 
-}
-		.white-hexagon.fl-col {
-    margin-bottom: -10%;
-    width: 120%;
-    left: -20%;
-}
-		.white-hexagon > .fl-col-content {
-		margin-top:20%;
- padding-left:10%;
-			padding-right:10%;
-}
-		.splash-page .single-hex .fl-button {
-    bottom: 0px!important;
-    top: auto!important;
-    right: calc(13% + 40px)!important;
-    width: 36px;
-}
-		.enter-text .fl-module-content {
-    margin-right: calc(13% + 45px)!important;
-}
-		
-	}
-
-	@media (max-width: 680px) {
-		.white-hexagon.fl-col:before{
-			height: 100%;
-			width:calc(100% + 40px);
-			left:-20px;
-			background-size:cover;
-		}
-		.left-white-hexagon.fl-col:before{
-			height: 100%;
-			width:calc(100% + 40px);
-			left:-20px;
-			background-size:cover;
-		}
-		.left-white-hexagon.fl-col{
-			margin-top:-20%;
-		}
-		.single-hex.fl-col:before{
-					top:0%;
-			width:100%;
-			left:0px;
-			height:100%;
-		background-size: cover;
-
-	}
-		.brown-hexagon.fl-col:before {
-    width: calc(100% + 40px);
-    left: -20px;
-    height: calc(100% + 100px);
-    background-size: cover;
-    top: -30px;
-}
-		.white-hexagon.fl-col {
-    margin-bottom: 0%;
-
-			position:relative;
-
-}
-		.pink-hex.fl-col:before {
-    left: 0%;
-    width: 100%;
-			background-position:center;
-			width:calc(100% + 40px);
-			left:-20px;
-		}
-		.brown-hexagon > .fl-col-content {
-    margin-left:20px!important;
-			margin-right: 20px!important;
-}
-		.pink-hex > .fl-col-content {
-		padding-top:20%;
-			padding-left:20%!important;
-			padding-right:20%!important;
-			max-width:100%;
-			padding-bottom:20%;
-} 
- 
-		.white-hexagon > .fl-col-content {
-		padding-top:50px;
-			padding-left:5%;
-			padding-right:5%;
-			max-width:100%;
-}
-		.left-white-hexagon > .fl-col-content {
-		padding-top:25%;
-			padding-bottom:20%;
-			padding-left:5%;
-			padding-right:5%;
-			max-width:100%;
-		}
-
-		.white-hexagon > .fl-col-content {
-		padding-top:50px;
-			padding-bottom:50px;
-		}
-		.fl-builder-content .brown-hexagon .brown-column-button a.fl-button {
-    top: -20px;
-    right: auto!important;
-    position: relative;
-	margin-bottom:0px;
-    z-index: 4;
-			
-}
-		.fl-builder-content .side-text-button a.fl-button {
-    position: relative;
-			height:auto;
-		max-height:100%;
-		padding-top:10px;
-		padding-bottom:10px;
-			margin-bottom:20px;
-			right:0px!important;
-			top:0px;
-}
-		.single-hex > .fl-col-content {
-		padding-top:30px!important;
-		padding-bottom:20px!important;
-		padding-left:20px!important;
-		padding-right:20px!important;
- 
-}
-		.single-hex.serv-head > .fl-col-content {
-    padding-top: 0px!important;
-			padding-bottom: 20px!important;
-			padding-left: 0px!important;
-			padding-right: 0px!important;
-}
-		.single-hex.serv-head .fl-button {
-    right: 0%!important;
-}
-		.splash-page .single-hex > .fl-col-content {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 13%;
-    margin-right: 13%;
-}
-		.splash-page .single-hex.fl-col:before {
-    height: calc(100% + 60px);
-    content: '';
-    display: block;
-    position: absolute;
-    top: -30px;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-			background-size: contain;
-}
-		
-.splash-page .single-hex > .fl-col-content {
-    padding-top: 40px!important;
-    padding-bottom: 0px!important;
-    padding-left: 0px!important;
-   padding-right: 0px!important;
-}
-		.splash-page .single-hex.brown-single > .fl-col-content {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    margin-left: 8%;
-    margin-right: 8%;
-}
-		
-    .splash-page .single-hex.brown-single > .fl-col-content {
-    padding-top: 70px!important;
-    padding-bottom: 0px!important;
-    padding-left: 0px!important;
-    padding-right: 0px!important;
-}
-		.enter-text .fl-module-content {
-    margin-right: 20px!important;
-}
-		.splash-page .single-hex .fl-button {
-    bottom: 0px!important;
-    top: auto!important;
-    right: auto!important;
-}
-		.splash-page .single-hex.brown-single.fl-col:before {
-    height: 100%;
-			top: 20px;
-}
-		.smaller-brown.brown-hexagon.fl-col:before {
-    top: -20px;
-    left: -20px;
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
-    z-index: 1;
-    background-size: cover;
-    background-position: center top;
-}
-		.graphicside .back-heading-text .fl-module-content {
-    margin-right: 0px;
-}
-}
 /* =========================
    3.4 - background text
    ========================= */
@@ -2194,69 +642,6 @@ margin-left: 20px;
 	}
 	
 	
-	/*SERVICES*/
-	
-	.main-serv-col .fl-col-content{
-		position: relative;
-	}
-	.main-service-img{
-		
-	}
-	.fl-builder-content .main-service-button .fl-button-right a.fl-button {
-		top: 0px;
-		left: calc(70% - 45px);
-	}
-	.service-top .white-hexagon > .fl-col-content {
-    margin-top: 15%;
-    margin-bottom: 10%;
-}
-	.main-service-img img{
-		width:230px;
-		height:295px!important;
-		object-fit:cover;
-	}
-	@media (max-width: 1024px){
-		.main-service-img img{
-		width:230px;
-		height:180px!important;
-		object-fit:cover;
-	}
-	}
-@media (max-width: 680px){
-		.top-row .right-slant.services-top-img img {
-    height: 400px!important;
-}
-	.service-top .white-hexagon.fl-col:before {
-    top: -50px;
-
-	}
-	.service-top .white-hexagon > .fl-col-content {
-    padding-top: 0px;
-    padding-bottom: 50px;
-}
-	.service-top .white-hexagon > .fl-col-content {
-    margin-top: 0%;
-    margin-bottom: 10%;
-}
-	.main-service-img img{
-		height:250px!important;
-	}
-	/*.fl-builder-content .main-service-button a.fl-button {
-    position: absolute;
-    top: 20px;
-    width: 45px;
-    height: auto;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-	.fl-builder-content .main-service-button a.fl-button .fl-button-text {
-    font-size: 12px!important;
-    right: 12px;
-    margin-left: 0em;
-}*/
-	}
 	
 
 /** END Page Specific CSS
@@ -2393,3 +778,142 @@ function fouc_protect_against () {
         </script>
     <?php
 } 
+add_filter( 'big_image_size_threshold', '__return_false' );
+add_action( 'admin_menu', 'remove_site_health_menu' );	
+/**
+ * Remove Site Health Sub Menu Item
+ */
+function remove_site_health_menu(){
+  remove_submenu_page( 'tools.php','site-health.php' ); 
+}
+add_action('wp_dashboard_setup', 'themeprefix_remove_dashboard_widget' );
+/**
+ *  Remove Site Health Dashboard Widget
+ *
+ */
+function themeprefix_remove_dashboard_widget() {
+    remove_meta_box( 'dashboard_site_health', 'dashboard', 'normal' );
+}
+
+/**********************************************/
+// START - Customising wp-login
+/**********************************************/
+function my_login_logo() { ?>
+    <style type="text/css">
+        body.login {background-color:#ffffff !important;    background-image: url(https://veronicaclareprojects.com/sarah-semilore/wp-content/uploads/2022/03/top-back.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+}}
+        body.login div#login {}
+        body.login div#login h1 {}
+        body.login div#login h1 a {
+			width: 120px;
+    			background-size: 120px;
+    			height: 120px;
+		}
+        body.login div#login form#loginform {
+   		 	background: #fbe6d6;
+    			border: 0;
+    			color: #2d2d2c;
+		}
+        body.login div#login form#loginform p {}
+        body.login div#login form#loginform p label {}
+        body.login div#login form#loginform input {}
+        body.login div#login form#loginform input#user_login {border-radius:0;}
+        body.login div#login form#loginform input#user_pass {border-radius:0;}
+        body.login div#login form#loginform p.forgetmenot {}
+        body.login div#login form#loginform p.forgetmenot input#rememberme {}
+        body.login div#login form#loginform p.submit {}
+        body.login div#login form#loginform p.submit input#wp-submit {
+    			border-radius: 0;
+    			width: 100%;
+    			margin-top: 10px;
+    			background: #2d2d2c;
+    			border: 0;
+    			height: 40px;
+		}
+        body.login div#login p#nav {color: #2d2d2c;}
+        body.login div#login p#nav a {color: #2d2d2c;}
+        body.login div#login p#backtoblog {color: #2d2d2c;}
+        body.login div#login p#backtoblog a {color: #2d2d2c;}
+        body.login div#login .privacy-policy-link {color: #2d2d2c;text-decoration:none;}
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+function my_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+function my_login_logo_url_title() {
+    return 'WEBSITE TITLE GOES HERE';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+/**********************************************/
+// END - Customising wp-login
+/**********************************************/
+
+/** ===============================
+ * Add Beaver Builder logo to login screen.
+ *
+ * @action login_enqueue_scripts
+ */
+function nerd_login_logo() {
+
+	$logo_image = get_theme_mod( 'fl-logo-image-retina' );
+
+	if ( ! $logo_image ) {
+		$logo_image = get_theme_mod( 'fl-logo-image' );
+	}
+
+	if ( $logo_image ) :
+		?>
+		<style type="text/css">
+			body.login div#login h1 a {
+				background: url(<?php echo esc_url( $logo_image ); ?>) no-repeat center center;
+				padding: 0px;
+				margin-bottom: 0px;
+				background-size: 320px;
+				width: auto;
+				height: 150px;
+			}
+
+		</style>
+		<?php
+	endif;
+}
+
+add_action( 'login_enqueue_scripts', 'nerd_login_logo' );
+
+/**
+ * Filter the login header URL.
+ *
+ * @filter login_headerurl
+ *
+ * @return string|void
+ */
+function nerd_login_logo_url() {
+	return home_url();
+}
+
+add_filter( 'login_headerurl', 'nerd_login_logo_url' );
+
+/**
+ * Filter the login header title.
+ *
+ * @filter login_headertitle
+ *
+ * @return string|void
+ */
+function nerd_login_logo_url_title() {
+	return get_bloginfo( 'name' );
+}
+
+add_filter( 'login_headertitle', 'nerd_login_logo_url_title' );
+
+// Move Yoast to bottom
+function yoasttobottom() {
+    return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
